@@ -161,6 +161,17 @@ footer {
     .navbar {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .nav-links a {
+        display: block;
+        text-align: center;
     }
     .karya-grid {
         grid-template-columns: 1fr;

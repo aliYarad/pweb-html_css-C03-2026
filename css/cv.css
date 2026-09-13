@@ -17,10 +17,10 @@
 }
 
 .cv-hero-text h1 {
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    font-size: 3rem;
-    letter-spacing: -1px;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    letter-spacing: 4px;
 }
 
 .cv-desc {
@@ -48,7 +48,7 @@
     border-radius: 32px;
 }
 
-/* --- ANIMASI NAMA: per huruf, besar-kecil, gonta-ganti biru --- */
+/* --- ANIMASI NAMA --- */
 .split-text span {
     display: inline-block;
     animation: letter-wave 2s ease-in-out infinite;
@@ -125,7 +125,7 @@
     color: #2c3e50;
 }
 
-/* --- KARIR: grid kartu, rounded lebih besar, judul mono bold --- */
+/* --- KARIR --- */
 .career-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -165,7 +165,7 @@
     line-height: 1.6;
 }
 
-/* --- PENDIDIKAN: section background gelap + garis penghubung --- */
+/* --- PENDIDIKAN --- */
 .edu-section {
     background-color: #2c3e50;
     padding: 60px 5%;
@@ -234,7 +234,7 @@
     color: #cdd6e0;
 }
 
-/* --- SKILLS: 4 per baris, "tirai" horizontal buka dari tengah --- */
+/* --- SKILLS --- */
 .skills-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -326,10 +326,21 @@
 
 @media screen and (max-width: 600px) {
     .cv-hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
     }
     .career-grid {
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .career-card {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .career-card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
     }
     .edu-row {
         flex-direction: column;
@@ -341,5 +352,8 @@
     }
     .skills-list {
         grid-template-columns: 1fr;
+    }
+    .edu-list::before {
+        display: none;
     }
 }
