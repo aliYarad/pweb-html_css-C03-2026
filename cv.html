@@ -16,7 +16,7 @@
         <ul class="nav-links">
             <li><a href="landing-page.html">Landing Page</a></li>
             <li><a href="cv.html" class="active">Creative CV</a></li>
-            <li><a href="media.html" class="active">Media & Kontak</a></li>
+            <li><a href="media.html">Media & Kontak</a></li>
         </ul>
     </nav>
 
@@ -151,22 +151,5 @@
     <footer>
         <p>Praktikum Pemweb Modul 1</p>
     </footer>
-
-    <script>
-        const splitEl = document.querySelector('.split-text');
-        const text = splitEl.textContent;
-        splitEl.textContent = '';
-        [...text].forEach((char, i) => {
-            if (char === ' ') {
-                splitEl.appendChild(document.createTextNode(' '));
-            } else {
-                const span = document.createElement('span');
-                span.textContent = char;
-                span.style.animationDelay = `${i * 0.12}s`;
-                splitEl.appendChild(span);
-            }
-        });
-    </script>
-
 </body>
 </html>
