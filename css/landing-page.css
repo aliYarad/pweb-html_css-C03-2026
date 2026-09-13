@@ -1,0 +1,196 @@
+/* --- RESET & FONT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- NAVBAR (Position, Flexbox, & Pseudo-class) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 1.2rem 5%;
+    position: sticky; /* Parameter: Position */
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Parameter: Pseudo-class hover */
+.nav-links a:hover, .nav-links a.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* --- HERO SECTION (Flexbox) --- */
+.hero-section {
+    display: flex; /* Parameter: Display Flex */
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-name {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-top: 1rem;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* --- KARYA / PENCAPAIAN SECTION (Grid) --- */
+.karya-section {
+    padding: 5rem 5%;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #222;
+}
+
+.karya-grid {
+    display: grid; /* Parameter: Display Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.karya-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative; /* Parameter: Position */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Parameter: Pseudo-class hover pada Card */
+.karya-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.karya-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.karya-card p {
+    color: #666;
+}
+
+/* --- CTA BUTTON --- */
+.cta-container {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Parameter: Pseudo-class hover pada Tombol */
+.cta-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .karya-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-name {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .karya-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-name {
+        font-size: 2rem;
+    }
+}
